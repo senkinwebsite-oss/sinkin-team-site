@@ -1,143 +1,161 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>צוות סנקין – אחרי נוף הגליל 🐆</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>צוות סנקין – אחרי נוף הגליל 🐆</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            direction: rtl;
-            background: linear-gradient(120deg, #f4effa, #e6dcf3);
-            color: #222;
-        }
+<style>
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Arial Rounded MT Bold", Arial, sans-serif;
+    direction: rtl;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    color: #222;
+    overflow-x: hidden;
+}
 
-        /* ===== HEADER ===== */
-        header {
-            position: relative;
-            background: #5e2b97;
-            color: white;
-            padding: 70px 20px 60px;
-            text-align: center;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-        }
+a {
+    text-decoration: none;
+}
 
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 85px;
-        }
+/* ===== HEADER ===== */
+header {
+    position: relative;
+    background: linear-gradient(90deg, #5e2b97, #8b4be1);
+    color: white;
+    padding: 80px 20px 80px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    border-bottom-left-radius: 50% 15%;
+    border-bottom-right-radius: 50% 15%;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-            letter-spacing: 1px;
-        }
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 90px;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+}
 
-        header p {
-            margin-top: 10px;
-            font-size: 1.3rem;
-            opacity: 0.95;
-        }
+header h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
 
-        /* ===== SECTIONS ===== */
-        section {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 70px 20px;
-            text-align: center;
-        }
+header p {
+    margin-top: 12px;
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
 
-        h2 {
-            color: #5e2b97;
-            font-size: 2.2rem;
-            margin-bottom: 25px;
-        }
+/* ===== SECTIONS ===== */
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 25px;
+    text-align: center;
+    position: relative;
+}
 
-        p {
-            font-size: 1.2rem;
-            line-height: 1.9;
-            margin: 0 auto 20px;
-        }
+h2 {
+    color: #5e2b97;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 
-        /* ===== ILIA PHOTO ===== */
-        .ilia-photo {
-            width: 260px;
-            height: 260px;
-            margin: 30px auto 25px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 6px solid #5e2b97;
-            box-shadow: 0 10px 28px rgba(0,0,0,0.4);
-        }
+p {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    margin: 0 auto 25px;
+    max-width: 850px;
+}
 
-        .ilia-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+/* ===== ILIA PHOTO ===== */
+.ilia-photo {
+    width: 300px;
+    height: 300px;
+    margin: 35px auto 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #5e2b97;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.ilia-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ilia-photo:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+}
 
-        /* ===== BUTTONS ===== */
-        .buttons {
-            margin-top: 35px;
-        }
+/* ===== BUTTONS ===== */
+.buttons {
+    margin-top: 50px;
+}
+.buttons a {
+    display: inline-block;
+    margin: 18px;
+    padding: 20px 50px;
+    font-size: 1.3rem;
+    color: white;
+    background: linear-gradient(45deg, #5e2b97, #8b4be1);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: all 0.35s ease;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.buttons a:hover {
+    background: linear-gradient(45deg, #8b4be1, #5e2b97);
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
 
-        .buttons a {
-            display: inline-block;
-            margin: 15px;
-            padding: 18px 42px;
-            font-size: 1.2rem;
-            color: white;
-            background: #5e2b97;
-            text-decoration: none;
-            border-radius: 12px;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.35);
-            transition: all 0.3s ease;
-        }
+/* ===== FOOTER ===== */
+footer {
+    background: #f0f0f0;
+    text-align: center;
+    padding: 40px 15px;
+    font-size: 1.1rem;
+    color: #333;
+    box-shadow: inset 0 5px 15px rgba(0,0,0,0.05);
+}
 
-        .buttons a:hover {
-            background: #4a2179;
-            transform: translateY(-4px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.45);
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #ececec;
-            text-align: center;
-            padding: 30px 15px;
-            font-size: 1rem;
-            color: #333;
-        }
-
-        /* ===== MOBILE ===== */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2.3rem;
-            }
-            h2 {
-                font-size: 1.8rem;
-            }
-            .ilia-photo {
-                width: 210px;
-                height: 210px;
-            }
-            .logo {
-                width: 65px;
-            }
-        }
-    </style>
+/* ===== MEDIA ===== */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .ilia-photo {
+        width: 220px;
+        height: 220px;
+    }
+    .buttons a {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    .logo {
+        width: 70px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <!-- לוגו -->
     <img src="לוגו.png" class="logo" alt="לוגו צוות סנקין">
-
     <h1>🐆 צוות סנקין</h1>
     <p>אחרי נוף הגליל · קבוצת הכנה לצה״ל (הכ״נ״ץ)</p>
 </header>
@@ -146,7 +164,7 @@
     <h2>מי אנחנו</h2>
     <p>
         צוות סנקין – אחרי נוף הגליל הוא צוות הכנה לצה״ל (הכ״נ״ץ),
-        הפועל מתוך ערכי מחויבות, משמעת, חוסן מנטלי ועבודת צוות.
+        הפועל מתוך מחויבות לערכים של משמעת, חוסן מנטלי ועבודת צוות.
     </p>
     <p>
         הצוות מלווה בני נוער לקראת שירות משמעותי בצה״ל,
@@ -171,12 +189,8 @@
 <section>
     <h2>הצטרפות ותרומה</h2>
     <div class="buttons">
-        <a href="https://chat.whatsapp.com/XXXXXXXX" target="_blank">
-            📱 הצטרפות לצוות
-        </a>
-        <a href="https://your-donation-link.com" target="_blank">
-            💜 תרומה לפעילות
-        </a>
+        <a href="https://chat.whatsapp.com/XXXXXXXX" target="_blank">📱 הצטרפות לצוות</a>
+        <a href="https://your-donation-link.com" target="_blank">💜 תרומה לפעילות</a>
     </div>
 </section>
 
