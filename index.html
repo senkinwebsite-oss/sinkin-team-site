@@ -3,137 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>צוות סנקין - אחרי נוף הגליל 🐆</title>
+    <title>צוות סנקין – אחרי נוף הגליל 🐆</title>
+
     <style>
-        /* ---- خطوط وخلفية ---- */
         body {
             margin: 0;
             font-family: "Segoe UI", Arial, sans-serif;
             direction: rtl;
-            background: linear-gradient(120deg, #f3e5f5, #e1bee7);
-            color: #333;
+            background: linear-gradient(120deg, #f4effa, #e6dcf3);
+            color: #222;
         }
 
+        /* ===== HEADER ===== */
         header {
-            background-color: #6a0dad;
-            padding: 60px 20px;
+            position: relative;
+            background: #5e2b97;
             color: white;
+            padding: 70px 20px 60px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
         }
 
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 85px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        /* ===== SECTIONS ===== */
         section {
-            padding: 50px 20px;
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
+            padding: 70px 20px;
             text-align: center;
         }
 
         h2 {
-            color: #6a0dad;
+            color: #5e2b97;
             font-size: 2.2rem;
             margin-bottom: 25px;
         }
 
-        /* ---- صورة إيليا ---- */
+        p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            margin: 0 auto 20px;
+        }
+
+        /* ===== ILIA PHOTO ===== */
         .ilia-photo {
-            width: 320px;
-            height: 320px;
-            margin: 0 auto 30px;
+            width: 260px;
+            height: 260px;
+            margin: 30px auto 25px;
             border-radius: 50%;
             overflow: hidden;
-            border: 6px solid #6a0dad;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            border: 6px solid #5e2b97;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.4);
         }
+
         .ilia-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin: 0 auto;
+        /* ===== BUTTONS ===== */
+        .buttons {
+            margin-top: 35px;
         }
 
-        /* ---- الأزرار ---- */
-        .buttons {
-            margin-top: 40px;
-        }
         .buttons a {
             display: inline-block;
-            margin: 15px 15px;
-            padding: 18px 40px;
+            margin: 15px;
+            padding: 18px 42px;
             font-size: 1.2rem;
             color: white;
+            background: #5e2b97;
             text-decoration: none;
-            border-radius: 10px;
-            background: #6a0dad;
+            border-radius: 12px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.35);
             transition: all 0.3s ease;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
+
         .buttons a:hover {
-            background: #530a9a;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            background: #4a2179;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.45);
         }
 
+        /* ===== FOOTER ===== */
         footer {
-            padding: 25px;
+            background: #ececec;
             text-align: center;
-            background-color: #eee;
+            padding: 30px 15px;
             font-size: 1rem;
+            color: #333;
         }
 
-        /* ---- متوافق موبايل ---- */
-        @media(max-width: 500px){
-            .ilia-photo {
-                width: 220px;
-                height: 220px;
+        /* ===== MOBILE ===== */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.3rem;
             }
             h2 {
                 font-size: 1.8rem;
             }
-            .buttons a {
-                padding: 15px 25px;
-                font-size: 1rem;
+            .ilia-photo {
+                width: 210px;
+                height: 210px;
+            }
+            .logo {
+                width: 65px;
             }
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>🐆 צוות סנקין - אחרי נוף הגליל</h1>
+    <!-- לוגו -->
+    <img src="לוגו.png" class="logo" alt="לוגו צוות סנקין">
+
+    <h1>🐆 צוות סנקין</h1>
+    <p>אחרי נוף הגליל · קבוצת הכנה לצה״ל (הכ״נ״ץ)</p>
 </header>
 
-<section id="ilia">
-    <h2>סמ"ר איליה סנקין ז"ל</h2>
-    <div class="ilia-photo">
-        <img src="ilia.png" alt="איליה סנקין">
-    </div>
+<section>
+    <h2>מי אנחנו</h2>
     <p>
-        סמ"ר איליה סנקין ז"ל, מנוף הגליל, לוחם בגבעתי,
-        נפל בקרב בצפון רצועת עזה ב-20 בנובמבר 2023,
-        בן 20 בנופלו. דרכו ממשיכה לחיות בעשייה של צוות סנקין,
-        והוא מהווה השראה לחניכים ולמובילים צעירים בכושר קרבי.
+        צוות סנקין – אחרי נוף הגליל הוא צוות הכנה לצה״ל (הכ״נ״ץ),
+        הפועל מתוך ערכי מחויבות, משמעת, חוסן מנטלי ועבודת צוות.
+    </p>
+    <p>
+        הצוות מלווה בני נוער לקראת שירות משמעותי בצה״ל,
+        באמצעות מסגרת רצינית, אימונים פיזיים והכנה מנטלית,
+        בדגש על התמדה, אחריות ודרך.
     </p>
 </section>
 
-<section id="actions">
+<section>
+    <h2>למה "צוות סנקין"</h2>
+    <div class="ilia-photo">
+        <img src="ilia.png" alt="סמ״ר איליה סנקין ז״ל">
+    </div>
+    <p>
+        הצוות נקרא על שמו של סמ"ר איליה סנקין ז״ל,
+        בן העיר נוף הגליל ולוחם בחטיבת גבעתי,
+        כסמל לערכים, לזיכרון ולהמשכיות הדרך –
+        ולא כחלק מפעילות הכושר הקרבי עצמה.
+    </p>
+</section>
+
+<section>
+    <h2>הצטרפות ותרומה</h2>
     <div class="buttons">
-        <a href="https://senkinwebsite-oss.github.io/sinkin-team-site/">📱 הצטרף לקבוצה</a>
-        <a href="https://your-donation-link.com" target="_blank">💜 לתרום עכשיו</a>
+        <a href="https://chat.whatsapp.com/XXXXXXXX" target="_blank">
+            📱 הצטרפות לצוות
+        </a>
+        <a href="https://your-donation-link.com" target="_blank">
+            💜 תרומה לפעילות
+        </a>
     </div>
 </section>
 
 <footer>
-    © כל הזכויות שמורות לצוות סנקין - אחרי נוף הגליל 🐆
+    צוות סנקין – אחרי נוף הגליל 🐆<br>
+    קבוצת הכנה לצה״ל
 </footer>
 
 </body>
