@@ -122,6 +122,40 @@ p {
     box-shadow: 0 25px 60px rgba(0,0,0,0.7);
 }
 
+/* ===== INSTAGRAM POSTS ===== */
+.insta-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.insta-card {
+  width: 320px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease;
+}
+.insta-card:hover {
+  transform: scale(1.05);
+}
+.insta-card img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+.insta-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
 /* ===== FOOTER ===== */
 footer {
     background: #111;
@@ -148,6 +182,7 @@ footer {
     .ilia-photo{width:220px;height:220px;}
     .buttons a{padding:15px 35px;font-size:1.1rem;}
     .logo{width:70px;}
+    .insta-card{width:90%;}
 }
 </style>
 
@@ -194,6 +229,21 @@ footer {
         <a href="https://chat.whatsapp.com/XXXXXXXX" target="_blank">📱 הצטרפות לצוות</a>
         <a href="https://your-donation-link.com" target="_blank">💜 תרומה </a>
     </div>
+</section>
+
+<!-- ===== INSTAGRAM POSTS ===== -->
+<section>
+  <h2>פוסטים מהאינסטגרם שלנו</h2>
+  <div class="insta-posts">
+    <div class="insta-card">
+      <a href="https://www.instagram.com/p/DUNy7hmDFCn/" target="_blank">
+        <img src="insta1.png" alt="Instagram Post">
+        <div class="insta-overlay">
+          ❤️ 120 &nbsp; 💬 30
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
 
 <footer>
