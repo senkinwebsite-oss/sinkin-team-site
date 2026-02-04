@@ -67,7 +67,7 @@ section {
     backdrop-filter: blur(15px);
     border-radius: 30px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 section:hover {transform: translateY(-5px);}
@@ -94,7 +94,7 @@ p {
     overflow: hidden;
     border: 8px solid #8b4be1;
     box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    transition: transform 0.6s ease;
 }
 .ilia-photo img {
     width: 100%;
@@ -119,6 +119,7 @@ p {
     border-radius: 16px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.5);
     transition: all 0.4s ease;
+    text-decoration: none;
 }
 .buttons a:hover {
     transform: translateY(-8px) scale(1.08);
@@ -142,13 +143,12 @@ p {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease;
+  text-decoration: none;
 }
 
-.insta-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+.insta-card:hover {
+  transform: scale(1.05);
 }
 
 .insta-card img {
@@ -185,7 +185,7 @@ footer {
 <header>
     <img src="לוגו.png" class="logo" alt="לוגו צוות סנקין">
     <h1>🐆 צוות סנקין</h1>
-    <p></p>אחריי נוף הגליל · קבוצת הכנ״ץ</p>
+    <p>אחריי נוף הגליל · קבוצת הכנ״ץ</p>
     <div class="tagline">כושר קרבי</div>
 </header>
 
@@ -193,9 +193,9 @@ footer {
     <h2>מי אנחנו</h2>
     <p>
         צוות סנקין – אחריי נוף הגליל הוא צוות כושר קרבי ערכי ונחוש,
-הפועל בנוף הגליל ומוביל בני נוער בדרך של משמעת, חוסן מנטלי, מחויבות ועמידה באתגרים –
-מתוך רוח של עוצמה, אחריות וגאווה מקומית, לקראת שירות משמעותי בצה״ל.
-
+        הפועל בנוף הגליל ומוביל בני נוער בדרך של משמעת, חוסן מנטלי,
+        מחויבות ועמידה באתגרים – מתוך רוח של עוצמה, אחריות וגאווה מקומית,
+        לקראת שירות משמעותי בצה״ל.
     </p>
     <p>
         כושר קרבי הוא לא רק הכנה פיזית,
@@ -217,26 +217,24 @@ footer {
 
 <section>
     <h2>הצטרפות ותרומה</h2>
-    <div class="buttons">,
+    <div class="buttons">
         <a href="https://chat.whatsapp.com/XXXXXXXX" target="_blank">📱 הצטרפות לצוות</a>
         <a href="https://your-donation-link.com" target="_blank">💜 תרומה</a>
     </div>
 </section>
 
 <section>
-  <h2>🦾💜האינסטגרם שלנו</h2>
+  <h2>🦾💜 האינסטגרם שלנו</h2>
   <div class="insta-posts">
-    <div class="insta-card">
-      <a href="https://www.instagram.com/p/DUNy7hmDFCn/" target="_blank">
+    <a class="insta-card" href="https://www.instagram.com/p/DUNy7hmDFCn/" target="_blank">
         <img src="insta1.JPG" alt="Instagram Post">
-      </a>
-    </div>
+    </a>
   </div>
 </section>
 
 <footer>
     צוות סנקין – אחריי נוף הגליל 🐆<br>
-    קבוצת כושר קרבי-הכנה לצה״ל
+    קבוצת כושר קרבי · הכנה לצה״ל
 </footer>
 
 </body>
