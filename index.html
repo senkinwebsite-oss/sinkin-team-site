@@ -6,7 +6,6 @@
 <title>צוות סנקין – אחריי נוף הגליל 🐆</title>
 
 <style>
-/* ===== GENERAL ===== */
 * {margin:0; padding:0; box-sizing:border-box;}
 body {
     font-family: "Segoe UI", "Arial Rounded MT Bold", Arial, sans-serif;
@@ -19,7 +18,7 @@ body {
 /* ===== HEADER ===== */
 header {
     position: relative;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,9 +37,16 @@ header h1 {
 }
 
 header p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-top: 15px;
     opacity: 0.9;
+}
+
+.tagline {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    opacity: 0.85;
+    letter-spacing: 1px;
 }
 
 .logo {
@@ -61,7 +67,7 @@ section {
     backdrop-filter: blur(15px);
     border-radius: 30px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 section:hover {transform: translateY(-5px);}
@@ -70,19 +76,19 @@ h2 {
     font-size: 3rem;
     color: #e0c3fc;
     margin-bottom: 25px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 p {
     font-size: 1.3rem;
     line-height: 2;
+    max-width: 850px;
     margin: 0 auto 25px;
 }
 
 /* ===== ILIA PHOTO ===== */
 .ilia-photo {
-    width: 340px;
-    height: 340px;
+    width: 320px;
+    height: 320px;
     margin: 40px auto 35px;
     border-radius: 50%;
     overflow: hidden;
@@ -97,7 +103,6 @@ p {
 }
 .ilia-photo:hover {
     transform: scale(1.1) rotate(-3deg);
-    box-shadow: 0 35px 80px rgba(0,0,0,0.7);
 }
 
 /* ===== BUTTONS ===== */
@@ -114,18 +119,18 @@ p {
     border-radius: 16px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.5);
     transition: all 0.4s ease;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 .buttons a:hover {
-    background: linear-gradient(45deg, #8b4be1, #5e2b97);
     transform: translateY(-8px) scale(1.08);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.7);
 }
 
-/* ===== INSTAGRAM POSTS ===== */
+.buttons a:last-child {
+    background: linear-gradient(45deg,#ff4ecd,#8b4be1);
+}
+
+/* ===== INSTAGRAM ===== */
 .insta-posts {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   margin-top: 30px;
@@ -137,23 +142,18 @@ p {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-  transition: transform 0.3s ease;
 }
-.insta-card:hover {
-  transform: scale(1.05);
+
+.insta-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
 }
+
 .insta-card img {
   width: 100%;
   display: block;
-  border-radius: 15px;
-}
-.insta-overlay {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  font-size: 1rem;
-  color: white;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
 /* ===== FOOTER ===== */
@@ -163,29 +163,21 @@ footer {
     padding: 50px 15px;
     font-size: 1.2rem;
     color: #e0c3fc;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    box-shadow: inset 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* ===== ANIMATIONS ===== */
+/* ===== ANIM ===== */
 @keyframes gradientBG {
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
-/* ===== MEDIA ===== */
 @media (max-width: 800px){
     header h1{font-size:3rem;}
     h2{font-size:2rem;}
     .ilia-photo{width:220px;height:220px;}
-    .buttons a{padding:15px 35px;font-size:1.1rem;}
-    .logo{width:70px;}
-    .insta-card{width:90%;}
 }
 </style>
-
 </head>
 
 <body>
@@ -194,19 +186,18 @@ footer {
     <img src="לוגו.png" class="logo" alt="לוגו צוות סנקין">
     <h1>🐆 צוות סנקין</h1>
     <p>אחרי נוף הגליל · קבוצת הכנה לצה״ל (הכנ״ץ)</p>
+    <div class="tagline">כושר קרבי הוא לא רק הכנ״ץ</div>
 </header>
 
 <section>
     <h2>מי אנחנו</h2>
     <p>
-        צוות סנקין – אחריי 
-        נוף הגליל הוא צוות הכנה לצה״ל (הכנ״ץ),
+        צוות סנקין – אחריי נוף הגליל הוא צוות כושר קרבי והכנה לצה״ל (הכנ״ץ),
         הפועל מתוך ערכים של מחויבות, משמעת, חוסן מנטלי ועבודת צוות.
     </p>
     <p>
-        הצוות מלווה בני נוער לקראת שירות משמעותי בצה״ל,
-        באמצעות מסגרת רצינית, אימונים פיזיים והכנה מנטלית,
-        בדגש על התמדה, אחריות ודרך.
+        כושר קרבי הוא לא רק הכנה פיזית,
+        אלא גם דרך, ערכים ובניית אופי לקראת שירות משמעותי בצה״ל.
     </p>
 </section>
 
@@ -216,31 +207,26 @@ footer {
         <img src="ilia.png" alt="סמ״ר איליה סנקין ז״ל">
     </div>
     <p>
-        הצוות נקרא על שמו של סמ"ר איליה סנקין ז״ל,
+        הצוות נקרא על שמו של סמ״ר איליה סנקין ז״ל,
         בן העיר נוף הגליל ולוחם בחטיבת גבעתי,
-        כסמל לערכים, לזיכרון ולהמשכיות הדרך –
-        ולא כחלק מפעילות הכושר הקרבי עצמה.
+        כסמל לערכים, לזיכרון ולהמשכיות הדרך.
     </p>
 </section>
 
 <section>
     <h2>הצטרפות ותרומה</h2>
-    <div class="buttons">
+    <div class="buttons">,
         <a href="https://chat.whatsapp.com/XXXXXXXX" target="_blank">📱 הצטרפות לצוות</a>
-        <a href="https://your-donation-link.com" target="_blank">💜 תרומה </a>
+        <a href="https://your-donation-link.com" target="_blank">💜 תרומה</a>
     </div>
 </section>
 
-<!-- ===== INSTAGRAM POSTS ===== -->
 <section>
-  <h2>פוסטים מהאינסטגרם שלנו</h2>
+  <h2>🦾💜האינסטגרם שלנו</h2>
   <div class="insta-posts">
     <div class="insta-card">
       <a href="https://www.instagram.com/p/DUNy7hmDFCn/" target="_blank">
         <img src="insta1.JPG" alt="Instagram Post">
-        <div class="insta-overlay">
-          ❤️ 120 &nbsp; 💬 30
-        </div>
       </a>
     </div>
   </div>
@@ -248,7 +234,7 @@ footer {
 
 <footer>
     צוות סנקין – אחריי נוף הגליל 🐆<br>
-     קבוצת הכנה לצה״ל
+    קבוצת כושר קרבי-הכנה לצה״ל
 </footer>
 
 </body>
