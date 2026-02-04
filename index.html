@@ -220,14 +220,41 @@ footer {
 </footer>
 
 <script>
+const RESET_TIME = 30000; // 30 ثانية
+
 document.querySelectorAll('.view-post').forEach(card => {
+
   card.addEventListener('click', () => {
     if (card.classList.contains('active')) return;
+
     card.classList.add('active');
+
+    // نحفظ وقت الكبسة
+    localStorage.setItem(
+      'insta_click_time',
+      Date.now()
+    );
+
     setTimeout(() => {
       window.open(card.dataset.link, '_blank');
     }, 900);
   });
+
+});
+
+// لما نرجع عالصفحة
+window.addEventListener('focus', () => {
+  const clickTime = localStorage.getItem('insta_click_time');
+  if (!clickTime) return;
+
+  const now = Date.now();
+
+  if (now - clickTime >= RESET_TIME) {
+    document.querySelectorAll('.view-post').forEach(card => {
+      card.classList.remove('active');
+    });
+    localStorage.removeItem('insta_click_time');
+  }
 });
 </script>
 
